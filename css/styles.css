@@ -1,0 +1,713 @@
+/*~~~~~~~~~~~~~~~~~~~~~~~~~~~~ MEYERWEB CSS RESET ~~~~~~~~~~~~~~~~~~~~~~~~~~~*/
+
+html, body, div, span, applet, object, iframe,
+h1, h2, h3, h4, h5, h6, p, blockquote, pre,
+a, abbr, acronym, address, big, cite, code,
+del, dfn, em, img, ins, kbd, q, s, samp,
+small, strike, strong, sub, sup, tt, var,
+b, u, i, center,
+dl, dt, dd, ol, ul, li,
+fieldset, form, label, legend,
+table, caption, tbody, tfoot, thead, tr, th, td,
+article, aside, canvas, details, embed, 
+figure, figcaption, footer, header, hgroup, 
+menu, nav, output, ruby, section, summary,
+time, mark, audio, video {
+	margin: 0;
+	padding: 0;
+	border: 0;
+	font-size: 100%;
+	font: inherit;
+	vertical-align: baseline;
+}
+/* HTML5 display-role reset for older browsers */
+article, aside, details, figcaption, figure, 
+footer, header, hgroup, menu, nav, section {
+	display: block;
+}
+body {
+	line-height: 1;
+}
+ol, ul {
+	list-style: none;
+}
+blockquote, q {
+	quotes: none;
+}
+blockquote:before, blockquote:after,
+q:before, q:after {
+	content: '';
+	content: none;
+}
+table {
+	border-collapse: collapse;
+	border-spacing: 0;
+}
+
+
+/*~~~~~~~~~~~~~~~~~~~~~~~~~~~~ COLUMNS ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~*/
+
+div[class*="col-"] { /*Ensures all columns float left*/
+    float: left;
+}
+
+.col-d-1 {width: 8.33%;}
+.col-d-2 {width: 16.66%;}
+.col-d-3 {width: 25%;}
+.col-d-4 {width: 33.33%;}
+.col-d-5 {width: 41.66%;}
+.col-d-6 {width: 50%;}
+.col-d-7 {width: 58.33%;}
+.col-d-8 {width: 66.66%;}
+.col-d-9 {width: 75%;}
+.col-d-10 {width: 83.33%;}
+.col-d-11 {width: 91.66%;}
+.col-d-12 {width: 100%;}
+
+.small {height: 30px;}
+.medium {height: 200px;}
+.large {height: 500px;}
+
+
+/*~~~~~~~~~~~~~~~~~~~~~~~~~~~~ BASIC SITE STYLES ~~~~~~~~~~~~~~~~~~~~~~~~~~~~*/
+
+
+html {
+    overflow: scroll;
+    overflow-x: hidden;
+}
+
+::-webkit-scrollbar {
+    width: 0px;  /* remove scrollbar space */
+    background: transparent;  /* optional: just make scrollbar invisible */
+}
+
+.buffer {
+    height: 120px;
+}
+
+.clearfix:after {
+   content: " "; /* Older browsers do not support empty content */
+   visibility: hidden;
+   display: block;
+   height: 0;
+   clear: both;
+}
+
+body {
+    position: absolute;
+    top: 0;
+    left: 0;
+    font-size: 16px;
+    font-family: 'Oswald', sans-serif;
+    font-weight: 200;
+    color: #fff; /*fallback for older browsers*/
+    color: rgba(255, 255, 255, 0.8);
+    letter-spacing: 2px;
+    line-height: 2em;
+}
+
+h2, h3 {
+    font-family: 'Rajdhani', sans-serif;
+    display: inline-block;
+}
+
+h2 {
+    font-size: 40px;
+    letter-spacing: 4px;
+}
+
+h3 {
+    font-size: 50px;
+    font-weight: 700;
+    padding: 20px 10px;
+    letter-spacing: 10px;
+}
+
+h4 {
+    font-size: 23px;
+    font-weight: 400;
+}
+
+h5 {
+    font-size: 16px;
+    padding-top: 6px;
+    font-weight: 400;
+}
+
+.whiteline {
+    position: relative;
+    background-color: #fff;
+    height: 1px;
+}
+
+.tab {
+    padding-left: 10px;
+}
+
+/*~~~~~~~~~~~~~~~~~~~~~~~~~~~~ NAV ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~*/
+
+nav {
+    position: fixed;
+    bottom: 20px;
+    z-index: 40;
+}
+
+.navdot {
+    width: 6px;
+    height: 6px;
+    -moz-border-radius: 5px;
+	-webkit-border-radius: 5px;
+	border-radius: 50%;
+    background-color: #fff;
+    transition: 0.2s all ease;
+}
+
+nav a { /*thin white circle around dot*/
+    content: " ";
+    position: absolute;
+    top: -8px;
+    left: -8px;
+    border: 1px solid white;
+    width: 20px;
+    height: 20px;
+    border-radius: 50%;
+    transition: 0.2s all ease;
+}
+
+.navdot::before {
+    content: '';
+    position: absolute;
+    border-radius: 50%;
+    width: 60px;
+    height: 60px;
+    left: 3px;
+    top: 3px;
+    transform: translate(-50%, -50%);
+    z-index: -1;
+}
+
+.navdot:hover {
+    transform: scale(1.2, 1.2);
+}
+
+#navintro {
+    position: absolute;
+    top: -3px;
+    left: 20%;
+}
+
+#navcolours {
+    position: absolute;
+    top: -3px;
+    left: 40%;
+}
+
+#navplanets {
+    position: absolute;
+    top: -3px;
+    left: 60%;
+}
+
+#navbuy {
+    position: absolute;
+    top: -3px;
+    left: 80%;
+}
+
+/*~~~~~~~~~~~~~~~~~~~~~~~~~~~~ INTRO ~~~~~~~~~~~~~~~~~~~~~~~~~~~*/
+
+
+.sec-intro {
+    position: relative;
+    background-image: url("../img/intro-bg.png");
+    background-size: cover;
+    background-position: center;
+    min-height: 100vh;
+}
+
+    .art-quote {
+        text-align: center;
+        width: 900px;
+        height: 200px;
+        position: relative;
+        left: 27%;
+        top: 350px;
+    }
+        .q-line2 {
+            padding-top: 20px;
+        }
+
+#blurb2, #blurb3, #blurb4, #blurb5 {
+    width: 400px;
+    height: 200px;
+    line-height: 2em;
+    text-align: center;
+    margin: 0 auto;
+    position: relative;
+    top: 350px;
+}
+
+#down-arrow {
+    display: block;
+    margin: 0 auto;
+    background-clip: content-box;
+    border-radius: 50%;
+    padding: 20px;
+    position: relative;
+    top: 500px;
+}
+    #down-arrow:hover {
+        cursor: pointer;
+        border: 1px solid white;
+        transform: translate(0, -1px);
+    }
+
+.darrow {
+    width: 100%;
+    position: absolute;
+    bottom: 0;
+    vertical-align: bottom;
+    text-align: center;
+    overflow: hidden;
+}
+
+    .darrow-red {
+        opacity: 0;
+        float: left;
+        position: relative;
+        left: -900px;
+        top: 2px;
+        z-index: 20;
+    }
+        #botred {
+            opacity: 0;
+            position: absolute;
+            left: -900px;
+            top: 15px;
+            z-index: 2;
+        }
+
+    .darrow-gold {
+        opacity: 0;
+        right: -900px;
+        position: relative;
+        z-index: 20;
+        float: right;
+    }
+        #botgold {
+            position: absolute;
+            right: -900px;
+            top: 3px;
+            z-index: 2;
+        }
+
+
+/*~~~~~~~~~~~~~~~~~~~~~~~~~~~~ COLOURS ~~~~~~~~~~~~~~~~~~~~~~~~~*/
+
+.sec-colours {
+    position: relative;
+    background-image: url("../img/colors-bg.png");
+    background-size: cover;
+    background-position: center;  
+    min-height: 100vh;
+}
+
+.hierarchy-info {
+    text-align: center;
+    padding: 70px 0 40px 50px;
+}
+
+.art-colour-info {
+    opacity: 0;
+    overflow: hidden;
+    background-image: url("../img/c-textframe.png");
+    height: 586px;
+    width: 434px;
+    position: absolute;
+    left: -500px;
+}
+
+#placeholder {
+    opacity: 0;
+    margin-top: 70px;
+}
+
+.colour-info {
+    text-align: center;
+    padding: 40px 20px 0 20px;
+}
+
+.colour-info p {
+    padding-top: 20px;
+}
+
+.art-pyramid {
+    position: relative;
+    top: 150px;
+    right: 90px;
+    float: right;
+    background-image: url("../img/c-pyramid.png");
+    background-position: center;
+    height: 692px;
+    width: 802px;
+}
+
+/*-----------Pyramid Placement-----------*/
+
+.art-pyramid img {
+    position: absolute;
+    opacity: 0;
+}
+
+.art-pyramid img:hover {
+    cursor: pointer;
+}
+
+#c-1    {left: 42.5%;}
+#c-2    {top: 16.9%; left: 33.6%;}
+#c-3    {top: 16.9%; left: 42.9%;}
+#c-4    {top: 17.3%; left: 51.6%;}
+#c-5    {top: 34.5%; left: 25.3%;}
+#c-6    {top: 33.7%; left: 33.8%;}
+#c-7    {top: 34.8%; left: 43.1%;}
+#c-8    {top: 33.7%; left: 51.2%;}
+#c-9    {top: 34.9%; left: 60.9%;}
+#c-10   {top: 50.4%; left: 17%;}
+#c-11   {top: 67.2%; left: 8.6%;}
+#c-12   {top: 67.2%; left: 33%;}
+#c-13   {top: 67.2%; left: 59.9%;}
+#c-14   {top: 84%;   left: -0.1%;}
+
+
+/*-----------Colour Titles-----------*/
+
+h6 {
+    font-size: 40px;
+    font-weight: 400;
+    letter-spacing: 5px;
+/*  text-shadow: 2px 0px 0px rgba(255, 255, 255, 0.8);*/
+}
+
+.gold       {color: #8b7943;}
+.silver     {color: #898989;}
+.copper     {color: #90482e;}
+.blue       {color: #405fa3;}
+.yellow     {color: #a0983d;}
+.green      {color: #425c28;}
+.violet     {color: #6f5084;}
+.orange     {color: #b8782d;}
+.grey       {color: dimgrey;}
+.brown      {color: #674324;}
+.obsidian   {color: #101222;}
+.pink       {color: #a35064;}
+.red        {color: #811001;}
+
+        
+/*~~~~~~~~~~~~~~~~~~~~~~~~~~~~ PLANETS ~~~~~~~~~~~~~~~~~~~~~~~~~*/
+
+.sec-planets {
+    position: relative;
+    background-image: url("../img/p-background.png");
+    background-size: cover;
+    background-position: center;  
+    min-height: 100vh;
+}
+
+
+/*-----------Planet Info-----------*/
+
+.art-planets {
+    text-align: center;
+    padding: 50px 30px;
+}
+
+.planets-info {
+    font-size: 14px;
+    overflow: hidden;
+    background-image: url('../img/p-textframe.png');
+    height: 700px;
+    width: 413px;
+    position: absolute;
+    right: -700px;
+    top: 20%;
+}
+
+.planet {
+    padding: 10px 20px;
+    margin-top: 20px;
+    margin-left: 10px;
+}
+
+
+/*-----------Planet Diagram-----------*/
+
+
+.p-img:not(#p-6):hover {
+    cursor: pointer;
+    box-shadow: 0px 0px 5px 1px rgba(255,255,255,1);
+    transition: 0.2s all ease;
+}
+
+#saturn {
+    border-radius: 50%;
+}
+
+#saturn:hover {
+    cursor: pointer;
+    box-shadow: 0px 0px 5px 1px rgba(255,255,255,1);
+    transition: 0.2s all ease;
+}
+
+.solar-sys {
+    position: relative;
+    top: 20%;
+}
+
+#orbit {
+    float: left;
+}
+
+.p-img {
+    position: absolute;
+    transition: 0.5s all ease;
+    border-radius: 100%;
+    opacity: 0;
+}
+
+#sun {
+    position: absolute;
+    left: -10px;
+    top: 130px;
+}
+
+#p-1 {
+    left: 168px;
+    top: 346px;
+}
+
+#p-2 {
+    left: 220px;
+    top: 328px;
+}
+
+#p-3 {
+    left: 308px;
+    top: 327px;
+}
+
+#p-4 {
+    left: 430px;
+    top: 335px;
+}
+
+#p-5 {
+    left: 510px;
+    top: 280px;
+}
+
+#p-6 {
+    left: 720px;
+    top: 320px;
+}
+
+#saturn-ring {
+    width: 150px;
+    height: auto;
+    position: absolute;
+    pointer-events: none;
+    top: 2px;
+    left: -33px;
+}
+
+#p-7 {
+    left: 914px;
+    top: 315px;
+}
+
+#p-8 {
+    left: 1180px;
+    top: 315px;
+}
+
+#p-9 {
+    left: 1360px;
+    top: 340px;
+}
+
+/*~~~~~~~~~~~~~~~~~~~~~~~~~~~~ BUY ~~~~~~~~~~~~~~~~~~~~~~~~~~~*/
+
+.sec-buy {
+    position: relative;
+    background-image: url("../img/buy-bg.png");
+    background-size: cover;
+    background-position: center;  
+    min-height: 100vh;
+}
+
+.particles-js {
+    position: absolute;
+    z-index: 100;
+    width: 100%;
+    height: 100%;
+    top: 0;
+    left: 0;
+}
+
+.art-buy-info {
+    position: relative;
+    float: left;
+    text-align: center;
+}
+
+.onsale {
+    opacity: 0;
+    position: relative;
+    left: -500px;
+    text-align: center;
+    float: right;
+    margin-right: 200px;
+    background-image: url(../img/c-textframe.png);
+    background-repeat: no-repeat;
+    height: 586px;
+    width: 434px;
+}
+
+
+.onsale h3 {
+    margin-top: 50px;
+}
+
+.art-buy-info h5 {
+    margin-top: 20px;
+}
+
+.art-book {
+    position: relative;
+    right: -500px;
+    float: left;
+    opacity: 0;
+}
+
+.amazon-link {
+    color: #fff;
+    text-decoration: none;
+    text-align: center;
+    border: 1px solid white;
+    width: 300px;
+    padding: 5px 0;
+    margin-top: 30px;
+    margin-left: 200px;
+    transition: 0.2s box-shadow ease;
+}
+
+.amazon-link:hover {
+    box-shadow: 0px 0px 5px 1px rgba(255,255,255,1);
+    transition: 0.2s all ease;
+}
+
+.amazon-link a {
+    color: #fff;
+    text-decoration: none;
+}
+
+.art-book img {
+    display: block;
+    margin-left: 200px;
+    margin-top: 20px;
+    height: 460px;
+    width: auto;
+    border: 1px solid white;
+}
+
+#footer {
+    display: block;
+    width: 475px;
+    height: auto;
+    margin: 0 auto;
+    padding-top: 40px;
+}
+
+/*~~~~~~~~~~~~~~~~~~~~~~~~~~~~ MEDIA QUERIES ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~*/
+
+/*Ended up not making it responsive, sorry*/
+
+/*=============== Tablet ===============*/
+
+.col-t-1 {width: 8.33%;}
+.col-t-2 {width: 16.66%;}
+.col-t-3 {width: 25%;}
+.col-t-4 {width: 33.33%;}
+.col-t-5 {width: 41.66%;}
+.col-t-6 {width: 50%;}
+.col-t-7 {width: 58.33%;}
+.col-t-8 {width: 66.66%;}
+.col-t-9 {width: 75%;}
+.col-t-10 {width: 83.33%;}
+.col-t-11 {width: 91.66%;}
+.col-t-12 {width: 100%;}
+
+
+/*=============== Mobile ===============*/
+
+.col-m-1 {width: 8.33%;}
+.col-m-2 {width: 16.66%;}
+.col-m-3 {width: 25%;}
+.col-m-4 {width: 33.33%;}
+.col-m-5 {width: 41.66%;}
+.col-m-6 {width: 50%;}
+.col-m-7 {width: 58.33%;}
+.col-m-8 {width: 66.66%;}
+.col-m-9 {width: 75%;}
+.col-m-10 {width: 83.33%;}
+.col-m-11 {width: 91.66%;}
+.col-m-12 {width: 100%;}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
